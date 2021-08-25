@@ -1,6 +1,11 @@
 const express = require("express");
 const Book = require("../models/book");
 
+const { validate } = require("jsonschema")
+
+const bookSchemaNew = require("../schemas/bookSchemaNew")
+const bookSchemaUpdate = require("../schemas/bookSchemaUpdate")
+
 const router = new express.Router();
 
 
